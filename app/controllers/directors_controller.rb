@@ -6,7 +6,7 @@ class DirectorsController < ApplicationController
   def show
     d_id = params.fetch("d_id")
 
-    matching_records = Director.where({ :id => "d_id"})
+    matching_records = Director.where({ :id => d_id })
 
     @the_director = matching_records.at(0)
 
